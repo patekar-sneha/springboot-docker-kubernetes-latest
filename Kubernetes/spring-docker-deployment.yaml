@@ -1,13 +1,13 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: spring-boot-docker-deployment
+  name: spring-boot-docker
 spec:
   # minReadySeconds: 30
   selector:
     matchLabels:
       app: spring-boot-docker
-  replicas: 1
+  replicas: 2
   template: # template for the pods
     metadata:
       labels:
@@ -15,6 +15,4 @@ spec:
     spec:
       containers:
       - name: spring-boot-docker
-        image: gcr.io/spring-kube/spring-boot-docker
-        ports:
-        - containerPort: 80
+        image: snehpatekar/demo-docker:firsttry
