@@ -8,10 +8,10 @@ spec:
     app: spring-boot-docker
     # give this when there is pods and service for selector and labels --
     #release: 0
-
-
   ports:
-  - name: http
+  - protocol: TCP
     port: 80
+    targetPort: 80
+  type: NodePort
 # if you are running on any cloud provider remove the nodePort and change type as LoadBalancer
-  type: LoadBalancer
+  #type: LoadBalancer
