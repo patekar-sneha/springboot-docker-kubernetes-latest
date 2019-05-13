@@ -15,4 +15,4 @@ spec:
     spec:
       containers:
       - name: spring-boot-docker
-        image: snehpatekar/demo-docker:firsttry
+        image: gcr.io/solar-program-240207/spring-boot-docker
