@@ -1,4 +1,4 @@
-apiVersion: apps/v1
+apiVersion: extensions/v1beta1
 kind: Deployment
 metadata:
   name: spring-boot-docker
@@ -15,4 +15,6 @@ spec:
     spec:
       containers:
       - name: spring-boot-docker
-        image: snehpatekar/demo-docker:firsttry
+        image: gcr.io/spring-kube/spring-docker
+        ports:
+        - containerPort: 80
